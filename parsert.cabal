@@ -1,0 +1,133 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 5f878819e9dee074a3527e4466f30c836c3aa18c58df2708926d2b8b6f9f9785
+
+name:           parsert
+version:        1.0.12
+synopsis:       Parsert is a collection of composable monad transformers allowing for building parsers highly tailored for specific needs.
+category:       Data
+stability:      experimental
+homepage:       https://github.com/https://github.com/wdanilo/parsert#readme
+bug-reports:    https://github.com/https://github.com/wdanilo/parsert/issues
+author:         Wojciech Danilo
+maintainer:     Wojciech Danilo <wojciech.danilo@gmail.com>
+license:        Apache-2.0
+license-file:   LICENSE
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/https://github.com/wdanilo/parsert
+
+library
+  exposed-modules:
+      Control.Monad.State.Strict2
+      Control.Monad.Trans.Either.Strict
+      Data.Either.Strict
+      Text.Parsert
+  other-modules:
+      Paths_parsert
+  hs-source-dirs:
+      src
+  default-extensions: AllowAmbiguousTypes ApplicativeDo Arrows BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels PackageImports QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns LiberalTypeSynonyms RelaxedPolyRec
+  ghc-options: -Wall -O2
+  build-depends:
+      MonadRandom
+    , base
+    , bytestring
+    , deepseq
+    , dependent-state
+    , either
+    , exceptions
+    , free
+    , mmorph
+    , monad-branch
+    , monad-control
+    , mtl
+    , prologue
+    , semigroupoids
+    , text
+    , transformers
+    , transformers-base
+    , typelevel
+    , vector-text
+  default-language: Haskell2010
+
+benchmark parsert-alt-core
+  type: exitcode-stdio-1.0
+  main-is: Alt.hs
+  other-modules:
+      Paths_parsert
+  hs-source-dirs:
+      test/bench/core
+  default-extensions: AllowAmbiguousTypes ApplicativeDo Arrows BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels PackageImports QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns LiberalTypeSynonyms RelaxedPolyRec
+  ghc-options: -ddump-simpl -ddump-to-file -dsuppress-idinfo -dsuppress-module-prefixes
+  build-depends:
+      MonadRandom
+    , base
+    , bytestring
+    , deepseq
+    , dependent-state
+    , either
+    , exceptions
+    , free
+    , mmorph
+    , monad-branch
+    , monad-control
+    , mtl
+    , parsert
+    , prologue
+    , semigroupoids
+    , text
+    , transformers
+    , transformers-base
+    , typelevel
+    , vector-text
+  default-language: Haskell2010
+
+benchmark parsert-benchmark
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      Main2
+      Main3
+      Main4
+      Paths_parsert
+  hs-source-dirs:
+      test/bench
+  default-extensions: AllowAmbiguousTypes ApplicativeDo Arrows BangPatterns BinaryLiterals ConstraintKinds DataKinds DefaultSignatures DeriveDataTypeable DeriveFoldable DeriveFunctor DeriveGeneric DeriveTraversable DoAndIfThenElse DuplicateRecordFields EmptyDataDecls FlexibleContexts FlexibleInstances FunctionalDependencies GeneralizedNewtypeDeriving InstanceSigs LambdaCase MonadComprehensions MultiWayIf NamedWildCards NegativeLiterals NoImplicitPrelude NumDecimals OverloadedLabels PackageImports QuasiQuotes RankNTypes RecursiveDo ScopedTypeVariables StandaloneDeriving TemplateHaskell TupleSections TypeApplications TypeFamilies TypeFamilyDependencies TypeOperators ViewPatterns LiberalTypeSynonyms RelaxedPolyRec
+  build-depends:
+      MonadRandom
+    , attoparsec
+    , base
+    , bytestring
+    , criterion
+    , deepseq
+    , dependent-state
+    , either
+    , exceptions
+    , free
+    , kan-extensions
+    , lens
+    , megaparsec
+    , mmorph
+    , monad-branch
+    , monad-control
+    , mtl
+    , mtl-c
+    , parsert
+    , prologue
+    , random
+    , semigroupoids
+    , text
+    , timeit
+    , transformers
+    , transformers-base
+    , typelevel
+    , vector
+    , vector-text
+  default-language: Haskell2010
